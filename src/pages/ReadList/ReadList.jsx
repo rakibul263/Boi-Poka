@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { getStoreBook } from '../../utility/addToDb';
 import Book from '../Book/Book';
 // import Book from '../../components/Book/Book';
+import { getStoreBook } from '../../utilities/localStorage'; // Adjust the path as needed
 
 const ReadList = () => {
     const data = useLoaderData();
@@ -20,7 +20,7 @@ const ReadList = () => {
         const myReadList = data.filter(book => convertedStoredBook.includes(book.bookId));
         // console.log(myReadList);
         setReadList(myReadList);
-    }, []);
+    }, [data]);
     return (
         <div>
             <Tabs>
