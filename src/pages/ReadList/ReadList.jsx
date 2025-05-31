@@ -4,7 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Book from '../Book/Book';
 // import Book from '../../components/Book/Book';
-import { getStoreBook } from '../../utilities/localStorage'; // Adjust the path as needed
+import { getStoreBook } from '../../utility/addToDB'; // Import from the correct path
 
 const ReadList = () => {
     const data = useLoaderData();
