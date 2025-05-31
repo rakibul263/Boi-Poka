@@ -15,7 +15,6 @@ const addToStoreDB = (id) => {
 
     if(storedBookData.includes(id)) {
         console.log('This book is already in your read list');
-        alert('This book is already in your read list');
     }
     else{
         storedBookData.push(id);
