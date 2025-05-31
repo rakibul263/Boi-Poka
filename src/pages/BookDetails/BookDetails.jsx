@@ -2,7 +2,7 @@ import React from 'react';
 // import Swal from 'sweetalert2'
 // import withReactContent from 'sweetalert2-react-content'
 import { useLoaderData, useParams } from 'react-router';
-import { addToDB } from '../../utility/addToDB';
+import { addToStoreDB } from '../../utility/addToDB';
 import { ToastContainer, toast } from 'react-toastify';
 
 // const MySwal = withReactContent(Swal)
@@ -17,7 +17,7 @@ const BookDetails = () => {
 
 
     const handelMarkAsRead = (id) => {
-        addToDB(id);
+        addToStoreDB(id);
 
         // MySwal.fire({
         // title: "Good job!",
